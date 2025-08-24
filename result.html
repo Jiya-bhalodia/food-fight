@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Result</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(120deg, #a8e6cf, #dcedc1, #ffd3b6, #ffaaa5);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .result-box {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      font-family: 'Poppins', sans-serif;
+    }
+    .result-box h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .healthy { color: green; }
+    .unhealthy { color: red; }
+  </style>
+</head>
+<body>
+  <div class="result-box">
+    <h1 id="resultText">Loading...</h1>
+    <p id="scoreText"></p>
+  </div>
+
+  <script>
+    const results = JSON.parse(localStorage.getItem("quizResults")) || [];
+    const total = results.length;
+    const score = results.reduce((a,b) => a+b, 0);
+    const percentage = Math.round((score / total) * 100);
+
+    const resultText = document.getElementById("resultText");
+    const scoreText = document.getElementById("scoreText");
+
+    if (percentage >= 60) {
+      resultText.textContent = "🎉 You are Healthy!";
+      resultText.classList.add("healthy");
+    } else {
+      resultText.textContent = "⚠️ Not So Healthy!";
+      resultText.classList.add("unhealthy");
+    }
+    scoreText.textContent = `Your score: ${score}/${total} (${percentage}%)`;
+  </script>
+</body>
+</html>

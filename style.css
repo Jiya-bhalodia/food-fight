@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{
+    font-family: Poppins;
+}
+body {
+  background-color: #fdfdfd;
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 50px 50px; 
+
+}
+header p{
+    color: rgb(87, 84, 84);
+    margin-top: 40px;
+    margin-left: 90px;
+    font-weight: 600;
+    font-size: 50px;
+}
+span{
+    padding: 10px 25px;
+    border-radius: 13px;
+    border: 2px solid black;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    position: absolute;
+    color: rgb(70, 45, 12);
+}
+span:hover{
+    transform: translateY(-5px);
+}
+.f{
+    background-color: red;
+    box-shadow: 9px 9px 0 #d94f4f, 
+    2px 8px 15px rgba(0,0,0,0.25);  
+    transform: rotate(5deg) translateY(-3px);  
+    top: 100px;
+    right: 50px;
+}
+.o1{
+    background-color: rgb(248, 100, 125);
+    box-shadow: 9px 9px 0 palevioletred, 2px 8px 15px rgba(0,0,0,0.25);
+    top: 150px;
+    right: 150px;
+    transform: rotate(-6deg) translateY(-3px);
+}
+.o2{
+    background-color:lightblue;
+    box-shadow: 9px 9px 0 rgb(123, 203, 230), 2px 8px 15px rgba(0,0,0,0.25);
+    top: 110px;
+    right: 250px;
+    transform: rotate(14deg) translateY(-3px);
+}
+.d{
+    background-color: lightgreen;
+    box-shadow: 9px 9px 0 rgb(69, 199, 69), 2px 8px 15px rgba(0,0,0,0.25);
+    top: 140px;
+    right: 355px;
+    transform: rotate(-6deg) translateY(-3px);
+}
+.h{
+    background-color:#FFF59D ;
+    box-shadow: 9px 9px 0 #FFF176, 2px 8px 15px rgba(0,0,0,0.25);
+    top: 220px;
+    right: 265px;
+    transform: rotate(4deg) translateY(-3px);
+}
+.e{
+    background-color:#A5F2E3 ;
+    box-shadow: 9px 9px 0 #7FDACB, 2px 8px 15px rgba(0,0,0,0.25);
+    top: 260px;
+    right: 160px;
+    transform: rotate(-2.5deg) translateY(-3px);
+}
+.a{
+    background-color:#AB47BC ;
+    box-shadow: 9px 9px 0 #CE93D8, 2px 8px 15px rgba(0,0,0,0.25); 
+    top: 210px;
+    right: 50px;
+    transform: rotate(-6.5deg) translateY(-3px);
+}
+.l{
+    background-color:#FFA64D ;
+    box-shadow: 9px 9px 0 rgba(255, 166, 77, 0.5), 2px 8px 15px rgba(0,0,0,0.25); 
+    top: 300px;
+    right: 355px;
+    transform: rotate(-6.5deg) translateY(-3px);
+}
+.h0{
+    background-color:lightblue ;
+    box-shadow: 9px 9px 0 rgb(123, 203, 230), 2px 8px 15px rgba(0,0,0,0.25); 
+    top: 360px;
+    right: 130px;
+    transform: rotate(-5deg) translateY(-3px);
+}
+.t{
+    background-color:lightgreen;
+    box-shadow: 9px 9px 0 rgb(69, 199, 69) , 2px 8px 15px rgba(0,0,0,0.25); 
+    top: 340px;
+    right: 250px;
+    transform: rotate(6.5deg) translateY(-3px);
+}
+.y{
+     background-color:#FFF59D ;
+    box-shadow: 9px 9px 0 #FFF176 , 2px 8px 15px rgba(0,0,0,0.25); 
+    top: 330px;
+    right: 30px;
+    transform: rotate(5deg) translateY(-3px);
+}
+.a1{
+    background-color: green;
+    color: whitesmoke;
+}
+.b1{
+    background-color: red;
+    color: whitesmoke;
+}
+.options{
+    gap: 40px;
+    margin-top: 50px;
+    position: absolute;
+    display: flex;
+    left: 55px;
+    bottom: 30px;
+}
+.options button{
+    padding: 8px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 9px;
+} 
+.card {
+  width: 275px;
+  height: 280px;
+  perspective: 1000px; 
+  margin-left: 140px;
+  margin-top: 90px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.q1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-top: 15px;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.front {
+  background: #d94f4f;
+  display: flex;               
+  align-items: center;      
+  justify-content: center;     
+  font-size: 6rem;             
+  font-weight: bold;
+  transform: rotateY(0deg);
+  color: #fff;               
+  border-radius: 12px;
+  border: none;               
+}
+
+.back {
+  background: #d94f4f;
+  transform: rotateY(180deg);
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  align-items: center;         
+  padding: 20px;              
+  border-radius: 12px;
+  color: #fff;                
+}
